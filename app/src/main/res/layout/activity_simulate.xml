@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SimulateActivity">
+
+    <!-- Tab Bar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tabBar"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#00B3FF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- App Logo -->
+        <ImageView
+            android:id="@+id/appLogo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/applogo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="16dp" />
+
+        <!-- App Name -->
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="LabXplorer"
+            android:fontFamily="sans-serif-black"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/appLogo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/experimentTitle"
+        android:layout_width="379dp"
+        android:layout_height="75dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="#C5A2CE"
+        android:padding="15dp"
+        android:text="Upper consolute temperature of phenol-water system"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabBar" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="409dp"
+        android:layout_height="493dp"
+        android:layout_marginTop="36dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/experimentTitle"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/aimText"
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:background="#B1B1B1"
+            android:paddingTop="15dp"
+            android:text="• Aim:\n\tTo determine upper consolute temperature of a \n\tphenol-water system.\n"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/procedureText"
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:background="#B1B1B1"
+            android:text="• Procedure:\n\t1. Weight 4g of phenol...\n\t2. Add 2ml of water...\n\t3. Heat and stir...\n\t4. Note temperature T1°C and T2°C\n"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/observeText"
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:background="#B1B1B1"
+            android:paddingBottom="15dp"
+            android:text="• Overservations:\n\t1. Weight of phenol(w1) = 4g\n\t2. Density of distilled water = 1 g/ml\n\t3. Density of phenol = 1.071 g/ml"
+            android:textSize="16sp" />
+
+        <SeekBar
+            android:id="@+id/tempSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="#B1B1B1"
+            android:max="100"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/tempValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="3dp"
+            android:background="#B1B1B1"
+            android:padding="3dp"
+            android:text="Temperature: 40°C" />
+
+        <Button
+            android:id="@+id/btnVisualize"
+            android:layout_width="229dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="30dp"
+            android:padding="10dp"
+            android:textSize="15dp"
+            android:text="Visualize in AR" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

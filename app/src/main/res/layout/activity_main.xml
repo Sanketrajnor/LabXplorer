@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Tab Bar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tabBar"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#00B3FF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- App Logo -->
+        <ImageView
+            android:id="@+id/appLogo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/applogo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="16dp" />
+
+        <!-- App Name -->
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="LabXplorer"
+            android:fontFamily="sans-serif-black"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/appLogo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Capture Icon -->
+
+    <!-- Capture Text -->
+
+    <!-- Upload Icon -->
+
+    <!-- Upload Text -->
+
+    <!-- Image Area -->
+
+    <!-- Simulate Button -->
+    <ImageView
+        android:id="@+id/iconCapture"
+        android:layout_width="150dp"
+        android:layout_height="149dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="Capture"
+        android:src="@drawable/ic_capture"
+        app:layout_constraintEnd_toStartOf="@id/iconUpload"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabBar" />
+
+    <TextView
+        android:id="@+id/textCapture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Capture"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/iconCapture"
+        app:layout_constraintHorizontal_bias="0.531"
+        app:layout_constraintStart_toStartOf="@id/iconCapture"
+        app:layout_constraintTop_toBottomOf="@id/iconCapture" />
+
+    <ImageView
+        android:id="@+id/iconUpload"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="Upload"
+        android:src="@drawable/ic_upload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toEndOf="@id/iconCapture"
+        app:layout_constraintTop_toBottomOf="@id/tabBar" />
+
+    <TextView
+        android:id="@+id/textUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Upload"
+        android:textColor="#101010"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/iconUpload"
+        app:layout_constraintHorizontal_bias="0.57"
+        app:layout_constraintStart_toStartOf="@id/iconUpload"
+        app:layout_constraintTop_toBottomOf="@id/iconUpload" />
+
+    <ImageView
+        android:id="@+id/imageArea"
+        android:layout_width="345dp"
+        android:layout_height="415dp"
+        android:layout_marginTop="12dp"
+        android:background="#E0E0E0"
+        android:contentDescription="Displayed Image"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textUpload" />
+
+    <TextView
+        android:id="@+id/imgDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Your scanned image"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnSimulate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageArea"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnSimulate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#00B3FF"
+        android:text="Simulate"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageArea" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
