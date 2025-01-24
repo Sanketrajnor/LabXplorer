@@ -42,4 +42,10 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="overservations_n_t1_weight_of_phenol_w1_4g_n_t2_density_of_distilled_water_1_g_ml_n_t3_density_of_phenol_1_071_g_ml">• Overservations:\n\t1. Weight of phenol(w1) = 4g\n\t2. Density of distilled water = 1 g/ml\n\t3. Density of phenol = 1.071 g/ml</string>
+    <string name="visualize_in_ar">Visualize in AR</string>
+    <string name="procedure_n_t1_weight_4g_of_phenol_n_t2_add_2ml_of_water_n_t3_heat_and_stir_n_t4_note_temperature_t1_c_and_t2_c_n">• Procedure:\n\t1. Weight 4g of phenol...\n\t2. Add 2ml of water...\n\t3. Heat and stir...\n\t4. Note temperature T1°C and T2°C\n</string>
+    <string name="aim_n_tto_determine_upper_consolute_temperature_of_a_n_tphenol_water_system_n">• Aim:\n\tTo determine upper consolute temperature of a \n\tphenol-water system.\n</string>
+    <string name="upper_consolute_temperature_of_phenol_water_system">Upper consolute temperature of phenol-water system</string>
+    <string name="capture">Capture</string>
 </resources>

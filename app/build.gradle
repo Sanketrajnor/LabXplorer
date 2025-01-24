@@ -41,13 +41,36 @@ dependencies {
     implementation libs.core.ktx
     implementation libs.material.v180
 
-    // ML Kit Text Recognition Dependencies
-    implementation libs.play.services.mlkit.text.recognition
-    implementation libs.common
-    implementation project(':openCV')
+    // Navigation Dependencies
     implementation libs.navigation.fragment
     implementation libs.navigation.ui
+    //opencv
 
+    //Ar libraries
+    implementation libs.core
+    implementation libs.sceneform.core
+    implementation libs.sceneform.ux
+    //implementation libs.sceneform.assets
+
+    //implementation 'io.github.sceneview.arsceneview:0.9.8'
+
+    //implementation "com.gorisse.thomas.sceneform:sceneform:1.23.0"
+
+    implementation libs.dexter
+    implementation project(':opencv')
+
+    implementation libs.camera.core
+    implementation libs.androidx.camera.lifecycle
+    implementation libs.androidx.camera.view
+    implementation libs.androidx.camera.extensions
+
+    implementation libs.androidx.camera.camera2  // CameraX Camera2
+    implementation libs.androidx.camera.lifecycle.v110beta01  // CameraX Lifecycle
+    implementation libs.androidx.camera.view.v100alpha10
+    implementation libs.assets// CameraX PreviewView
+
+    //implementation libs.opencv.android.v470
+    // Testing Libraries
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core

@@ -5,6 +5,11 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="true" />
+    <uses-feature android:glEsVersion="0x00030000" android:required="true" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Permissions for AR and Sensors -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -13,19 +18,13 @@
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
-    <uses-feature
-        android:name="android.hardware.camera.ar"
-        android:required="true" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
     <uses-feature
         android:name="android.hardware.sensor.accelerometer"
         android:required="true" />
     <uses-feature
         android:name="android.hardware.sensor.gyroscope"
-        android:required="true" /> <!-- ARCore meta-data specifying the required ARCore version -->
-    <meta-data
-        android:name="com.google.ar.core"
-        android:value="required" />
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -36,22 +35,39 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LabXplorer"
+        android:usesCleartextTraffic="true"
         tools:targetApi="35">
+        <activity
+            android:name=".CaptureActivity"
+            android:exported="true" />
+
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="required" />
+
         <activity
             android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".SimulateActivity"
+            android:name=".ArActivity"
             android:exported="true"
             android:theme="@style/Theme.LabXplorer" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="com.google.ar.core"
+                android:value="required" />
+        </activity>
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"

@@ -45,107 +45,90 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Capture Icon -->
-
-    <!-- Capture Text -->
-
-    <!-- Upload Icon -->
-
-    <!-- Upload Text -->
-
-    <!-- Image Area -->
-
-    <!-- Simulate Button -->
-    <ImageView
-        android:id="@+id/iconCapture"
-        android:layout_width="150dp"
-        android:layout_height="149dp"
-        android:layout_marginTop="12dp"
-        android:contentDescription="Capture"
-        android:src="@drawable/ic_capture"
-        app:layout_constraintEnd_toStartOf="@id/iconUpload"
-        app:layout_constraintHorizontal_bias="0.2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tabBar" />
+    <!-- AR Fragment -->
+<!--    <fragment-->
+<!--        android:id="@+id/arFragment"-->
+<!--        android:name="com.google.ar.sceneform.ux.ArFragment"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tabBar"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent" />-->
 
     <TextView
-        android:id="@+id/textCapture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:gravity="center"
-        android:text="Capture"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/iconCapture"
-        app:layout_constraintHorizontal_bias="0.531"
-        app:layout_constraintStart_toStartOf="@id/iconCapture"
-        app:layout_constraintTop_toBottomOf="@id/iconCapture" />
-
-    <ImageView
-        android:id="@+id/iconUpload"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="12dp"
-        android:contentDescription="Upload"
-        android:src="@drawable/ic_upload"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toEndOf="@id/iconCapture"
-        app:layout_constraintTop_toBottomOf="@id/tabBar" />
-
-    <TextView
-        android:id="@+id/textUpload"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:gravity="center"
-        android:text="Upload"
-        android:textColor="#101010"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@id/iconUpload"
-        app:layout_constraintHorizontal_bias="0.57"
-        app:layout_constraintStart_toStartOf="@id/iconUpload"
-        app:layout_constraintTop_toBottomOf="@id/iconUpload" />
-
-    <ImageView
-        android:id="@+id/imageArea"
-        android:layout_width="345dp"
-        android:layout_height="415dp"
-        android:layout_marginTop="12dp"
-        android:background="#E0E0E0"
-        android:contentDescription="Displayed Image"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textUpload" />
-
-    <TextView
-        android:id="@+id/imgDesc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Your scanned image"
-        android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnSimulate"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageArea"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/btnSimulate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:backgroundTint="#00B3FF"
-        android:text="Simulate"
-        android:textColor="#FFFFFF"
+        android:id="@+id/experimentTitle"
+        android:layout_width="379dp"
+        android:layout_height="55dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="#C5A2CE"
+        android:padding="16dp"
+        android:text="@string/upper_consolute_temperature_of_phenol_water_system"
+        android:textAlignment="center"
+        android:textSize="37px"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageArea" />
+        app:layout_constraintTop_toBottomOf="@+id/tabBar" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="416dp"
+        android:layout_height="557dp"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/experimentTitle"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/aimText"
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:background="#B1B1B1"
+            android:paddingTop="0dp"
+            android:text="@string/aim_n_tto_determine_upper_consolute_temperature_of_a_n_tphenol_water_system_n"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/procedureText"
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:background="#B1B1B1"
+            android:text="@string/procedure_n_t1_weight_4g_of_phenol_n_t2_add_2ml_of_water_n_t3_heat_and_stir_n_t4_note_temperature_t1_c_and_t2_c_n"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/observeText"
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:background="#B1B1B1"
+            android:paddingBottom="15dp"
+            android:text="@string/overservations_n_t1_weight_of_phenol_w1_4g_n_t2_density_of_distilled_water_1_g_ml_n_t3_density_of_phenol_1_071_g_ml"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="240dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="Experimental Diagram"
+            android:src='@drawable/expdiagcr'
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnVisualize"
+            android:layout_width="229dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="0dp"
+            android:padding="0dp"
+            android:text="@string/visualize_in_ar"
+            android:textSize="15dp" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
